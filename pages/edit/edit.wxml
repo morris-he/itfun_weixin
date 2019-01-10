@@ -1,0 +1,28 @@
+<form bindsubmit="bindFormSubmit">
+  <view class='basics'>
+
+    <view class='title'>基本资料</view>
+    <view class='box'>
+      <view class='common'>邮箱账号
+        <text>1072612532@qq.com</text>
+      </view>
+
+      <view class='sex common' bindtap="chooseSex">
+        <text class='sex_gender info_title'>性别</text>
+        <text class='male info_title'>{{sex}}</text>
+      </view>
+
+
+      <view class='common none'>毕业院校
+        <input class='school_input' placeholder="长乐未央" />
+      </view>
+    </view>
+  </view>
+
+  <view class='introduce'>
+    <view class='title'>自我介绍</view>
+    <textarea class="textarea" placeholder="我的" name="textarea" />
+  </view>
+
+  <button class="button" form-type="submit">保存</button>
+</form>

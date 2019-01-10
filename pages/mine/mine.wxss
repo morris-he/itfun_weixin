@@ -1,0 +1,179 @@
+.likes_title {
+  font-size: 24rpx;
+  font-weight: bold;
+  margin: 16rpx 20rpx 0 16rpx;
+  color: #c7c9ca;
+}
+
+.likes_title_common {
+  margin-right: 30rpx;
+  padding-bottom: 20rpx;
+}
+
+.on{
+  color: #54616b;
+  border-bottom: 2px solid #1f99b0;
+}
+
+/* 个人 */
+
+.false {
+  margin-top: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100rpx;
+  background-color: #ebc72a;
+  font-size: 20rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.true {
+  margin-top: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100rpx;
+  background-color: #d3d3d3;
+  font-size: 20rpx;
+  text-align: center;
+  color: #333;
+}
+
+.home_header {
+  height: 85rpx;
+  background: #e4bc21;
+  text-align: center;
+  line-height: 85rpx;
+  margin-top: 25rpx;
+}
+
+.header_text {
+  color: #fff;
+}
+
+.home_main {
+  margin: 30rpx 30rpx 0 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.home_pic {
+  width: 200rpx;
+  height: 200rpx;
+
+}
+
+.home_thumb {
+  border-radius: 100rpx;
+  border: 2rpx solid #ededed;
+  width: 100%;
+  height: 100%;
+}
+
+.user_msg {
+  display: flex;
+  flex-direction: column; 
+  /* justify-content: flex-start; */
+  margin-left: 35rpx;
+  flex:1
+}
+
+.user_name {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 15rpx;
+}
+
+.user_text {
+  font-size: 22rpx;
+  padding-top: 14rpx;
+}
+
+.info_msg {
+  font-size: 22rpx;
+}
+
+.info_means {
+  margin: 55rpx 30rpx 0 30rpx;
+}
+
+.info_text {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30rpx;
+}
+
+.text_title {
+  display: inline-block;
+  font-size: 22rpx;
+  border: 2rpx solid #1f99b0;
+  border-radius: 5rpx;
+  padding: 7rpx 25rpx;
+  color: #1f99b0;
+}
+
+.info_matter {
+  display: flex;
+  justify-content: space-between;
+  height: 65rpx;
+  line-height: 65rpx;
+  border-bottom: 2rpx solid #ededed;
+}
+
+.info_title {
+  color: #91969b;
+}
+
+.info_num, .male {
+  color: #000;
+}
+
+/* 个人履历 */
+
+.likes_content {
+  margin: 45rpx 20rpx 0 20rpx;
+}
+
+.course_pic {
+  width: 710rpx;
+  height: 280rpx;
+  position: relative;
+}
+
+.course_pic_image {
+  height: 100%;
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.course_pic_time {
+  position: absolute;
+  font-size: 26rpx;
+  color: #fff;
+  height: 52rpx;
+  width: 220rpx;
+  line-height: 52rpx;
+  background: #333;
+  opacity: 0.5;
+  border-top-left-radius: 10rpx;
+}
+
+.course_pic_time_img {
+  height: 27rpx;
+  width: 27rpx;
+  position: absolute;
+  top: 12rpx;
+  left: 15rpx;
+}
+
+.course_text {
+  font-size: 26rpx;
+  color: rgb(68, 81, 91);
+  padding: 16rpx 0;
+}
+
+.course_date {
+  color: #9fa1a2;
+  font-size: 22rpx;
+  letter-spacing: 2rpx;
+}

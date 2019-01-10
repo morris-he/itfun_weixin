@@ -1,0 +1,6 @@
+<view class='content_box' wx:for='{{notices}}' wx:key="id">
+  <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">
+  <view class='title'>{{item.name}}</view>
+  </navigator>
+  <view class='creat_time'>{{item.created_at}}</view>
+</view>

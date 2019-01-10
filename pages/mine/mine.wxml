@@ -1,0 +1,71 @@
+<view class='likes_title'>
+  <text class="likes_title_common {{currentTab==0 ? 'on' : ''}}" data-current="0" data-slug="front_end" bindtap="swichNav">个人</text>
+  <text class="likes_title_common {{currentTab==1 ? 'on' : ''}}" data-current="1" 
+  data-slug="back_end" bindtap="swichNav">历史记录</text>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" style='height:1000rpx'>
+  <swiper-item>
+    <view class='home_header'>
+      <text class='header_text'>所有的动画教学免费看</text>
+    </view>
+    <view class='home_main'>
+      <view class='home_pic'>
+        <image class='home_thumb' src="{{user.photo}}"></image>
+      </view>
+      <view class='user_msg'>
+        <view class='user_name'>{{user.fullname}}</view>
+        <text class='user_text'>学习账号：{{user.id}}</text>
+        <view wx:if="{{user.premium}}" class='false'> ITfun会员 </view>
+        <view wx:if="{{!user.premium}}" class='true'> 免费会员 </view>
+      </view>
+    </view>
+    <view class='info_means'>
+
+      <view class='info_text'>
+        <navigator url="../edit/edit">
+          <text class='text_title'>高级设置</text>
+        </navigator>
+      </view>
+
+      <view class='info_msg'>
+        <view class='e-mail info_matter'>
+          <text class='mail info_title'>邮箱账号</text>
+          <text class='info_num info_title'>{{user.email}}</text>
+        </view>
+        <view class='sex info_matter'>
+          <text class='sex_gender info_title'>性别</text>
+          <text wx:if="{{!user.sex}}" class='male info_title'>女</text>
+          <text wx:if="{{user.sex}}" class='male info_title'>男</text>
+        </view>
+        <view class='school info_matter'>
+          <text class='school_name info_title'>学校名</text>
+          <text class='schoolstring info_title'>{{user.company}}</text>
+        </view>
+        <view class='introduce info_matter'>
+          <text class='self_introduce info_title'>自我介绍</text>
+          <text class='introduction info_title'>{{user.introduce}}</text>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='likes_content'>
+      <view class='course_pic '>
+        <image class='course_pic_image' mode="aspectFill" src='../../assets/image/fa72168bc8840e2f299b9a90e752b2d9.jpg'>
+        </image>
+      </view>
+
+      <view class='course_text'>The PHP Framework For Web Artisans，laravel 是适合艺术家来使用的 web 框架，一切东西都要尽可能的完美。</view>
+      <view class='course_date'>HTML入门</view>
+    </view>
+
+  </swiper-item>
+
+  <view class='point'>
+    <block wx:for="{{slide_courses}}" wx:key="unique">
+      <view class="point_common{{index == currentSwiper ? ' active' : ''}}"></view>
+    </block>
+  </view>
+
+</swiper>

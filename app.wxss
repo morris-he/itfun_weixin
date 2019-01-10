@@ -1,0 +1,21 @@
+@import "icon.wxss";
+
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.flex{
+  flex: 1
+}
+
+.relative{
+  position:relative;
+}
+
+.mt-30{
+  margin-top:30rpx;
+}

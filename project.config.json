@@ -1,0 +1,77 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.1",
+	"appid": "wx9f98429bd8c5bc19",
+	"projectname": "itfun",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "课程时间",
+					"pathName": "pages/notice/notice",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "收藏课程",
+					"pathName": "pages/collection/collection",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "测试",
+					"pathName": "pages/detail/detail",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "搜索页面",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "课程内页",
+					"pathName": "pages/detail/detail",
+					"query": "id=29"
+				}
+			]
+		}
+	}
+}

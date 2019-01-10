@@ -1,0 +1,131 @@
+<!-- <scroll-view scroll-x>
+  <view class='navigation'>
+    <text class="navigation-item{{currentTab==0 ? ' on' : ''}}" data-current='0' data-slug='front_end' bindtap='swichNav'>Web前端</text>
+    <text class="navigation-item{{currentTab==1 ? ' on' : ''}}" data-current='1' data-slug='back_end' bindtap='swichNav'>后端开发</text>
+    <text class="navigation-item{{currentTab==2 ? ' on' : ''}}" data-current='2' data-slug='operation' bindtap='swichNav'>运维</text>
+    <text class="navigation-item{{currentTab==3 ? ' on' : ''}}" data-current='3' data-slug='mobile' bindtap='swichNav'>移动前端开发</text>
+    <text class="navigation-item{{currentTab==4 ? ' on' : ''}}" data-current='4' data-slug='database' bindtap='swichNav'>数据库及储存</text>
+    <text class="navigation-item{{currentTab==5 ? ' on' : ''}}" data-current='5' data-slug='ui' bindtap='swichNav'>UI设计</text>
+  </view>
+</scroll-view> -->
+
+
+
+<scroll-view scroll-x>
+  <view class='navigation'>
+    <block wx:for='{{categories}}'>
+      <text class="navigation-item{{currentTab==index ? ' on' : ''}}" data-index="{{index}}" wx:key='index' data-slug='{{item.slug}}' bindtap='swichNav'>{{item.name}}</text>
+    </block>
+  </view>
+</scroll-view>
+
+<swiper current='{{currentTab}}' class='swiper-box' duration='300' bindchange='bindChange' style='height:{{height}}rpx'>
+  <swiper-item catchtouchmove="stopTouchMove">
+    <view class='swiper-content' wx:for="{{courses}}" wx:key="courses">
+      <navigator url="../detail/detail?id={{item.id}}" hover-class="navigator-hover">
+        <view class='pic'>
+          <image src="{{item.photo}}" class="photo" mode="aspectFit" />
+        </view>
+        <view class='name'>{{item.name}}</view>
+        <view class='body'>
+          <view wx:if="{{item.body == null}}">
+            暂无详情
+          </view>
+          <view wx:else>
+            {{item.body}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </swiper-item>
+
+  <swiper-item catchtouchmove="stopTouchMove">
+    <view class='swiper-content' wx:for="{{courses}}" wx:key="courses">
+      <navigator url="../detail/detail?id={{item.id}}" hover-class="navigator-hover">
+        <view class='pic'>
+          <image src="{{item.photo}}" class="photo" mode="aspectFit" />
+        </view>
+        <view class='name'>{{item.name}}</view>
+        <view class='body'>
+          <view wx:if="{{item.body == null}}">
+            暂无详情
+          </view>
+          <view wx:else>
+            {{item.body}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+    <view class='swiper-content' wx:for="{{courses}}" wx:key="courses">
+      <navigator url="../detail/detail?id={{item.id}}" hover-class="navigator-hover">
+        <view class='pic'>
+          <image src="{{item.photo}}" class="photo" mode="aspectFit" />
+        </view>
+        <view class='name'>{{item.name}}</view>
+        <view class='body'>
+          <view wx:if="{{item.body == null}}">
+            暂无详情
+          </view>
+          <view wx:else>
+            {{item.body}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+    <view class='swiper-content' wx:for="{{courses}}" wx:key="courses">
+      <navigator url="../detail/detail?id={{item.id}}" hover-class="navigator-hover">
+        <view class='pic'>
+          <image src="{{item.photo}}" class="photo" mode="aspectFit" />
+        </view>
+        <view class='body'>
+          <view wx:if="{{item.body == null}}">
+            暂无详情
+          </view>
+          <view wx:else>
+            {{item.body}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+    <view class='swiper-content' wx:for="{{courses}}" wx:key="courses">
+      <navigator url="../detail/detail?id={{item.id}}" hover-class="navigator-hover">
+        <view class='pic'>
+          <image src="{{item.photo}}" class="photo" mode="aspectFit" />
+        </view>
+        <view class='name'>{{item.name}}</view>
+        <view class='body'>
+          <view wx:if="{{item.body == null}}">
+            暂无详情
+          </view>
+          <view wx:else>
+            {{item.body}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </swiper-item>
+  <swiper-item catchtouchmove="stopTouchMove">
+    <view class='swiper-content' wx:for="{{courses}}" wx:key="courses">
+      <navigator url="../detail/detail?id={{item.id}}" hover-class="navigator-hover">
+        <view class='pic'>
+          <image src="{{item.photo}}" class="photo" mode="aspectFit" />
+        </view>
+        <view class='name'>{{item.name}}</view>
+        <view class='body'>
+          <view wx:if="{{item.body == null}}">
+            暂无详情
+          </view>
+          <view wx:else>
+            {{item.body}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </swiper-item>
+</swiper>

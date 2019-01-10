@@ -1,0 +1,31 @@
+
+page{
+  background-color: #f9f9f9
+}
+  .container{
+  margin: 60rpx 0;
+  font-size: 32rpx;
+  color: #279DB3
+}
+.content-box{
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #EBEAEC;
+  border-bottom: 1px solid #EBEAEC
+}
+.common{
+  padding: 30rpx 0;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #EBEAEC
+}
+.none{
+  border-bottom:none 
+}
+.exit{
+  text-align: center;
+  background: #fff;
+  padding: 30rpx;
+  margin-top: 100rpx;
+  border-top: 1px solid #EBEAEC;
+  border-bottom: 1px solid #EBEAEC
+}

@@ -1,0 +1,102 @@
+/* pages/chapters/chapters.wxss */
+@import '/towxml/style/main.wxss';
+@import '/towxml/style/theme/light.wxss';
+@import '/towxml/style/theme/dark.wxss';
+.main{
+  background: #fff;
+}
+.header{
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 10;
+  background: #fff;
+  box-shadow: 0rpx 4rpx 4rpx #ccc;
+  padding: 20rpx;
+  text-align: center;
+  font-size: 35rpx;
+}
+.video{
+  padding-top: 76rpx;
+  /* position: sticky;
+  top: 86rpx; */
+}
+.video video{
+  width: 100%;
+}
+.content{
+
+}
+.course-list{
+  display: flex;
+  width: 160rpx;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5rpx 25rpx;
+  border-radius: 30rpx;
+  margin: 20rpx 0 0 20rpx;
+}
+.course-list image{
+  width: 32rpx;
+  height: 32rpx;
+}
+.course-list text{
+  font-size: 28rpx;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+.side{
+  position: fixed;
+  top: 0rpx;
+  background: #fff;
+  height: 100%;
+  width: 80%;
+  border-right: 1rpx solid #ccc;
+  overflow: scroll;
+}
+.show-side{
+  transform: translate(80%,0%);
+  transition: all 0.5s ease 0s; 
+}
+.hidden-side{
+  transform: translate(0%,0%);
+  transition: all 0.5s ease 0s; 
+}
+.title{
+  font-size: 32rpx;
+  font-weight: bold;
+  background: #F1F2F2;
+  padding: 15rpx 30rpx;
+}
+.title image{
+  width: 32rpx;
+  height: 32rpx;
+  float: right;
+}
+.side .chapters{
+  margin-left: 25rpx;
+}
+.chapter-item{
+  font-size: 28rpx;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #ccc;
+}
+.chapter-item image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 30rpx;
+}
+.chapter-item .time{
+  float: right;
+  margin-right: 25rpx;
+}
+.cover{
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 80%;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease 0.3s; 
+}

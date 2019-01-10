@@ -1,0 +1,16 @@
+.content_box{
+  border-bottom: 1px solid #E9E8EA;
+  font-size: 26rpx;
+  padding: 20rpx 30rpx;
+  margin-left: 15rpx;
+}
+.title{
+  font-size: 26rpx;
+  font-weight: bold
+}
+.creat_time{
+  font-size: 22rpx;
+  color: #A9AFB4;
+  padding-top: 20rpx;
+  text-align: right;
+}

@@ -1,0 +1,63 @@
+<view class='login'>
+  <text class="login_title {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">注册</text>
+  <text class="login_title {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">登录</text>
+</view>
+
+<swiper current="{{currentTab}}" class="login_box" duration="300" bindchange="bindChange" style='height:1000rpx'>
+  <swiper-item>
+    <form bindsubmit="formSubmit_register" bindreset="formReset">
+      <view class='login_name'>
+        <view class='common'>姓名
+          <text class='hint'>注册后不可变更</text>
+        </view>
+        <input class='input' name="name" />
+      </view>
+      <view class='login_name'>
+        <view class='common'>邮箱
+          <text class='hint'>注册后不可变更</text>
+        </view>
+        <input class='input' name="username" />
+      </view>
+      <view class='login_name'>
+        <view class='common'>密码
+          <text class='hint'>请输入6位数密码</text>
+        </view>
+        <input class='input'  name="password" />
+      </view>
+      <view class='login_name'>
+        <view class='common'>出生年月
+        </view>
+        <input class='input'  name="birth" />
+      </view>
+
+      <view class='sex_box'>
+        <view class='sex_ins'>性别 </view>
+        <radio-group class="radio_group" name="sex" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}" wx:key='id'>
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </radio-group>
+      </view>
+
+      <button formType="submit">注册</button>
+    </form>
+  </swiper-item>
+
+  <swiper-item>
+    <form bindsubmit="formSubmit_login" bindreset="formReset">
+      <view class='login_name'>
+        <view class='common'>邮箱
+          <text class='hint'>注册后不可变更</text>
+        </view>
+        <input class='input'  name="username" />
+      </view>
+      <view class='login_name'>
+        <view class='common'>密码
+          <text class='hint'>请输入6位数密码</text>
+        </view>
+        <input class='input' name="password" />
+      </view>
+      <button formType="submit">登录</button>
+    </form>
+  </swiper-item>
+</swiper>

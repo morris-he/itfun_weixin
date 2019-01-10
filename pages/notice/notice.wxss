@@ -1,0 +1,74 @@
+/* pages/notice/index.wxss */
+.main{
+    margin: 20rpx;
+}
+
+.title{
+  color: #1F99B0
+}
+
+.title .left{
+  font-size: 40rpx;
+}
+
+.title .right{
+  margin-left: 300rpx;
+  font-size: 34rpx;
+}
+
+.new_date{
+  color: #6C6F71;
+  margin: 20rpx 0;
+}
+
+.time{
+  position: absolute;
+}
+
+.image_box{
+  border-radius:14rpx;
+  height: 360rpx;
+}
+
+.time{
+  background: #6C6F71;
+  color: #fff;
+  opacity: 0.7;
+  padding: 10rpx 40rpx;
+  border-radius:14rpx 0 0 0;
+}
+
+image{
+  width: 100%;
+  height: 100%;
+}
+
+.name{
+  margin: 30rpx 0;
+  color: #2D3741;
+  font-size:32rpx;
+}
+.image_box{
+  position: relative;
+}
+
+.heart_box{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  background-color: #fff;
+  border-radius: 40rpx;
+}
+.heart_icon{
+  width: 56rpx;
+  height: 56rpx;
+  margin-left: 13rpx;
+  padding-top: 13rpx;
+}
+
+.icon-people{
+  font-size: 100rpx;
+  color: red
+}

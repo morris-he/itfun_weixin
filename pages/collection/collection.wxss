@@ -1,0 +1,76 @@
+.swiper-tab{ 
+  width: 50%; 
+  border-bottom: 2rpx solid #eeeeee; 
+  text-align: center; 
+  line-height: 80rpx;
+  } 
+
+.swiper-tab-item{ 
+  font-size: 30rpx; 
+  display: inline-block; 
+  width: 50%; 
+  color: #666666; 
+} 
+
+.on{ 
+  color: #68BFCD;
+  border-bottom: 5rpx solid #68BFCD;
+  } 
+ 
+.swiper-box{ 
+  display: block;
+  height: 100%; 
+  width: 100%; 
+  overflow: hidden; 
+  } 
+
+.swiper-box .course{ 
+  margin: 10rpx;
+} 
+
+.image_box{
+  margin: 10rpx;
+  height: 300rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  position:relative;
+}
+
+.courses{
+  margin: 16rpx 10rpx;
+  margin-bottom: 120rpx;
+}
+
+.course_image{
+  width:100%;
+  height: 100%;
+}
+
+.heart_box{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  background-color: #fff;
+  border-radius: 40rpx;
+}
+.heart_icon{
+  width: 56rpx;
+  height: 56rpx;
+  margin-left: 13rpx;
+  padding-top: 13rpx;
+}
+
+.course_name{
+  color: #262F34;
+  margin: 20rpx 24rpx;
+  font-size: 36rpx;
+}
+
+.descript{
+  font-size: 30rpx;
+  text-indent: 2em;
+  padding:0 20rpx;
+  color: #999A9C
+}

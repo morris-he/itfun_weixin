@@ -1,0 +1,57 @@
+.login {
+  display: flex;
+}
+
+.login_title {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  color: #1e87a0;
+  font-size: 34rpx;
+  padding: 30rpx;
+}
+
+.login_title:hover {
+  background-color: #1e87a0;
+  color: #fff;
+}
+
+.login_box {
+  margin: 40rpx;
+}
+
+.login_name {
+  margin-bottom: 40rpx;
+}
+
+.common {
+  font-size: 30rpx;
+  letter-spacing: 10rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+
+.hint {
+  font-size: 22rpx;
+  position: absolute;
+  right: 0;
+  letter-spacing: normal;
+}
+
+.input {
+  background-color: #ededed;
+  margin-bottom: 10rpx;
+}
+.sex_box{
+font-size: 30rpx;
+display: flex
+}
+.radio_group{
+ margin-left: 30rpx;
+}
+.radio{
+  padding-right: 20rpx;
+}
+button {
+  margin-top: 60rpx;
+}

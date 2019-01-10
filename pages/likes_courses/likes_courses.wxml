@@ -1,0 +1,32 @@
+<view class='likes_title'>
+  <text class="likes_title_common {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">课程收藏</text>
+  <text class="likes_title_common {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">章节收藏</text>
+</view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" bindchange="bindChange" style='height:1000rpx'>
+  <swiper-item class='scroll'>
+    <view class='likes_content' wx:for='{{like_courses}}' wx:key="id">
+      <navigator url="../detail/detail?id={{item.id}}">
+        <view class='course_pic '>
+          <text class='.icon-heart'></text>
+          <image class='course_pic_image' mode="aspectFill" src='{{item.photo}}'>
+          </image>
+        </view>
+      </navigator>
+      <view class='course_title'>{{item.name}}</view>
+      <view class='course_text'>{{item.body}}</view>
+    </view>
+  </swiper-item>
+   <swiper-item class='scroll'>
+    <view class='likes_content' wx:for='{{like_chapters}}' wx:key="id">
+      <navigator url="">
+        <view class='course_pic '>
+          <text class='.icon-heart'></text>
+          <image class='course_pic_image' mode="aspectFill" src='{{item.photo}}'>
+          </image>
+        </view>
+      </navigator>
+      <view class='course_title'>{{item.title}}</view>
+      <view class='course_text'>{{item.body}}</view>
+    </view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,84 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class='search_box'>
+    <navigator url="../lesson/lesson">
+      <text class='icon-bell'></text>
+    </navigator>
+
+    <navigator url="../search/search">
+      <text class='icon-magnifier'></text>
+    </navigator>
+
+    <navigator url="../more/more">
+      <text class='icon-options'></text>
+    </navigator>
+  </view>
+  <!-- 滚播图 -->
+  <view class="hot">
+    <view class='find'>发现</view>
+    <view class='hot_title'>热门关注课程</view>
+
+    <swiper class='roll' bindchange="swiperChange" autoplay>
+      <block wx:for="{{slide_courses}}" wx:key="unique">
+        <swiper-item >
+          <view class='roll_pic '>
+            <text class='.icon-heart'></text>
+            <image class='roll_pic_image' src='{{item.photo}}'>
+            </image>
+          </view>
+          <view class='release_date'>{{item.created_at}}</view>
+          <view class='course_title'>{{item.name}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class='point'>
+        <view wx:for="{{slide_courses}}" wx:key="unique" 
+        class="point_common{{index == currentSwiper ? ' active' : ''}}"></view>
+    </view>
+  </view>
+
+  <!-- 最受欢迎课程 -->
+  <view class='content'>
+    <view class='welcome'>
+      <view class='welcome_course'>最受欢迎课程</view>
+      <scroll-view scroll-x="true">
+        <view class='welcome_image'>
+          <view class='welcome_course_image' wx:for="{{likes_courses}}" wx:key="unique">
+            <image class='course_image' mode="scaleToFill" src='{{item.photo}}'></image>
+            <view class='welcome_title'>{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+      
+    </view>
+
+    <view class='welcome'>
+      <view class='welcome_course'>课程发布日历</view>
+
+      <scroll-view scroll-x="true">
+        <view class='welcome_image'>
+          <view class='welcome_course_image' wx:for="{{new_courses}}" wx:key="unique" wx:for-index>
+            <image class='course_image' mode="scaleToFill" src='{{item.photo}}'></image>
+            <view class='welcome_title'>{{item.name}} {{index+1}}</view>
+          </view>
+        </view>
+      </scroll-view>
+      
+    </view>
+
+    <view class='welcome'>
+      <view class='welcome_course'>入门课程</view>
+      <scroll-view scroll-x="true">
+        <view class='welcome_image'>
+          <view class='welcome_course_image' wx:for="{{recommended_courses}}" wx:key="unique">
+            <image class='course_image' mode="scaleToFill" src='{{item.photo}}'></image>
+            <view class='welcome_title'>{{item.name}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+  </view>
+</view>

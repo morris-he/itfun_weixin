@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/find/find",
+    "pages/couses_calendar/couses_calendar",
+    "pages/likes_courses/likes_courses",
+    "pages/mine/mine",
+    "pages/detail/detail",
+    "pages/course/course",
+    "pages/more/more",
+    "pages/lesson/lesson",
+    "pages/search/search",
+    "pages/edit/edit",
+    "pages/login/login",
+    "pages/category/category",
+    "pages/chapters/chapters",
+    "null/lesson/lesson",
+    "null/teacher/teacher",
+    "null/news/news",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#111",
+    "navigationBarTitleText": "课程",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#1f99b0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "iconPath": "assets/image/find.png",
+        "selectedIconPath": "assets/image/find1.png",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "iconPath": "assets/image/category1.png",
+        "selectedIconPath": "assets/image/category.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/couses_calendar/couses_calendar",
+        "iconPath": "assets/image/calendar.png",
+        "selectedIconPath": "assets/image/calendar1.png",
+        "text": "课程日历"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "assets/image/user.png",
+        "selectedIconPath": "assets/image/user1.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

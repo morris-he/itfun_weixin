@@ -1,0 +1,25 @@
+<view>
+  <view class="search">
+    <input class='search_input' confirm-type="send" bindconfirm="searchBtn" focus='ture'/>
+    <text class='icon-magnifier '></text>
+    <image class='close' src='../../assets/image/close.png'></image>
+  </view>
+
+  <view class='content_box'>
+  <view class='title'>标签</view>
+  <view class='tag'>
+    <text class='common'>javascript</text>
+    <text class='common'>html</text>
+    <text class='common'>css</text>
+    <text class='common'>javascript</text>
+    <text class='common'>html</text>
+    <text class='common'>css</text>
+    <text class='common'>javascript</text>
+    <text class='common'>html</text>
+    <text class='common'>css</text>
+    <text class='common'>javascript</text>
+    <text class='common'>html</text>
+    <text class='common'>css</text>
+    </view>
+  </view>
+</view>

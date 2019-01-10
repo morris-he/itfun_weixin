@@ -1,0 +1,57 @@
+<view class='main'>
+  <view class='name'>发现</view>
+  <view class='category'>热门关注课程</view>
+  <view class="wrap">
+    <swiper class='swipers' autoplay="{{autoplay}}" circular="true" current="{{currentSwiper}}" bindchange="swiperChange">
+      <block wx:for="{{slide_courses}}">
+        <swiper-item class='swiper_item'>
+          <image src="{{item.photo}}" class="slide-image"/>
+            <view class='create_time'>{{item.created_at}}</view>
+            <view class='lesson_name'>{{item.name}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{slide_courses}}">
+        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+
+  <view class='hot'>
+    <view class='hot_top'>课程发布日历</view>
+    <scroll-view class="scroll-view_H" scroll-x style='height:270rpx'>
+      <view class='hot_class'>
+        <view class='image_box' wx:for="{{likes_courses}}">
+          <image src='{{item.photo}}' mode="aspectFill" ></image>
+          <view class='image_name'>{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='hot'>
+    <view class='hot_top'>最受欢迎课程</view>
+    <scroll-view class="scroll-view_H" scroll-x style='height:270rpx'>
+      <view class='hot_class'>
+        <view class='image_box' wx:for="{{new_courses}}">
+          <image src='{{item.photo}}' mode="aspectFill"></image>
+          <view class='image_name'>{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+    <view class='hot'>
+    <view class='hot_top'>入门课程</view>
+    <scroll-view class="scroll-view_H" scroll-x style='height:380rpx'>
+      <view class='hot_class'>
+        <view class='image_box' wx:for="{{recommended_courses}}">
+          <image src='{{item.photo}}' mode="aspectFill"></image>
+          <view class='image_name'>{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+</view>
