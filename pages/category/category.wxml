@@ -124,6 +124,9 @@
           <view wx:else>
             {{item.body}}
           </view>
+          <view>
+            测试更改
+          </view>
         </view>
       </navigator>
     </view>
