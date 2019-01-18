@@ -1,0 +1,29 @@
+/* pages/calendar/calendar.wxss */
+.container{
+  margin: 40rpx 25rpx;
+}
+.title{
+  font-size: 45rpx;
+  font-weight: bold;
+  color: #1F99B0;
+}
+.main .item{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.item text{
+  color: #111;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.item .created{
+  color: #999;
+  font-size: 35rpx;
+}
+.item image{
+  height: 280rpx;
+  width: 100%;
+  border-radius: 8rpx;
+}

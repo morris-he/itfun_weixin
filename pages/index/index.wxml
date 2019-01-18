@@ -1,57 +1,75 @@
-<view class='main'>
-  <view class='name'>发现</view>
-  <view class='category'>热门关注课程</view>
-  <view class="wrap">
-    <swiper class='swipers' autoplay="{{autoplay}}" circular="true" current="{{currentSwiper}}" bindchange="swiperChange">
-      <block wx:for="{{slide_courses}}">
-        <swiper-item class='swiper_item'>
-          <image src="{{item.photo}}" class="slide-image"/>
-            <view class='create_time'>{{item.created_at}}</view>
-            <view class='lesson_name'>{{item.name}}</view>
+
+<!-- 顶部跳转 -->
+  <view class='search_box'>
+      <text bindtap="toNews" class='icon-bell'></text>
+      <text bindtap="toSearch" class='icon-magnifier'></text>
+      <text bindtap="toAbout" class='icon-options'></text>
+  </view>
+
+<!-- 轮播部分 -->
+<view class="swiper">
+  <view class="title">
+    <text class="found">发现</text>
+    <text class="recommend">推荐课程</text>
+  </view>
+  <swiper circular="true" bindchange="changeDots" autoplay="true">
+    <block wx:for="{{slide_courses}}" wx:key='index'>
+      <navigator url="/pages/courses/courses?id={{item.id}}">
+        <swiper-item>
+          <image src="{{item.photo}}"></image>
+          <text class="created">{{item.created_at}}</text>
+          <text>{{item.name}}</text>
+          <text>{{item.desc}}</text>
         </swiper-item>
-      </block>
-    </swiper>
-    <view class="dots">
-      <block wx:for="{{slide_courses}}">
-        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
-      </block>
+      </navigator>
+    </block>
+  </swiper>
+  <view class="dots">
+    <block wx:for="{{slide_courses}}" wx:key='index'>
+      <view class="{{index === sliderIndex ? 'dot-active' : ''}}"></view>
+    </block>
+  </view>
+  <view class="border-bottom"></view>
+</view>
+
+<!-- 推荐课程部分 -->
+<view class="new_courses">
+  <text class="title2">课程发布日历</text>
+  <scroll-view scroll-x>
+    <view style="display: flex;">
+      <view class="scroll" wx:for="{{new_courses}}" wx:key='index'>
+        <navigator url="/pages/courses/courses?id={{item.id}}">
+          <image src="{{item.photo}}"></image>
+          <view>{{item.name}}</view>
+          <text class="created">{{item.created_at}}</text>
+        </navigator>
+      </view>
     </view>
-  </view>
-
-  <view class='hot'>
-    <view class='hot_top'>课程发布日历</view>
-    <scroll-view class="scroll-view_H" scroll-x style='height:270rpx'>
-      <view class='hot_class'>
-        <view class='image_box' wx:for="{{likes_courses}}">
-          <image src='{{item.photo}}' mode="aspectFill" ></image>
-          <view class='image_name'>{{item.name}}</view>
-        </view>
+  </scroll-view>
+</view>
+<view class="likes_courses">
+  <text class="title2">最受欢迎的课程</text>
+  <scroll-view scroll-x="false" style="width: 100%">
+    <view style="display: flex;">
+      <view class="scroll" wx:for="{{likes_courses}}" wx:key='index'>
+        <navigator url="/pages/courses/courses?id={{item.id}}">
+          <image src="{{item.photo}}"></image>
+          <view>{{item.name}}</view>
+        </navigator>
       </view>
-    </scroll-view>
-  </view>
-
-  <view class='hot'>
-    <view class='hot_top'>最受欢迎课程</view>
-    <scroll-view class="scroll-view_H" scroll-x style='height:270rpx'>
-      <view class='hot_class'>
-        <view class='image_box' wx:for="{{new_courses}}">
-          <image src='{{item.photo}}' mode="aspectFill"></image>
-          <view class='image_name'>{{item.name}}</view>
-        </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="recommended">
+  <text class="title2">入门课程</text>
+  <scroll-view scroll-x>
+    <view style="display: flex;">
+      <view class="scroll" wx:for="{{recommended_courses}}" wx:key='index'>
+        <navigator url="/pages/courses/courses?id={{item.id}}">
+          <image src="{{item.photo}}"></image>
+          <view>{{item.name}}</view>
+        </navigator>
       </view>
-    </scroll-view>
-  </view>
-
-    <view class='hot'>
-    <view class='hot_top'>入门课程</view>
-    <scroll-view class="scroll-view_H" scroll-x style='height:380rpx'>
-      <view class='hot_class'>
-        <view class='image_box' wx:for="{{recommended_courses}}">
-          <image src='{{item.photo}}' mode="aspectFill"></image>
-          <view class='image_name'>{{item.name}}</view>
-        </view>
-      </view>
-    </scroll-view>
-  </view>
-
+    </view>
+  </scroll-view>
 </view>

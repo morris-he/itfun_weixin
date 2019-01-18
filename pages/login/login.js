@@ -1,63 +1,104 @@
 // pages/login/login.js
 Page({
   data: {
-    currentTab: 0,
-    items: [{
-      name: 'man',
-      value: '男',
-      checked: 'true'
-    },
-    {
-      name: 'woman',
-      value: '女'
-    }
-    ]
+    buttonData: ['登录', '会员注册'],
+    currentIndex: 0,
+    radioData: [{
+        name: '男',
+        value: 1
+      },
+      {
+        name: '女',
+        value: 2
+      },
+      {
+        name: '其他',
+        value: 3
+      }
+    ],
+
+    error_email: '',
+    error_password: ""
+
   },
-  formSubmit_login: function (e) {
-    console.log(e.detail.value)
-    let data = {
-      // 固定字段
+  onLoad: function() {},
+  change(e) {
+    this.setData({
+      currentIndex: e.currentTarget.dataset.index
+    })
+  },
+  login(e) {
+    const data = {
       grant_type: 'password',
       client_id: 'c60de69e571fae852bea53e347a2be36503ebba84247a054cb7eb6549d161ac9',
       client_secret: 'd8491d666ee8749bc348eb25035ed0195dbd6cff586327ba9304013eb0d92734',
-      // 自己的字段
-      username: e.detail.value.username,
+      username: e.detail.value.user,
       password: e.detail.value.password
     }
     wx.request({
-      url: 'https://itfun.tv/oauth/token',     //接口地址
-      method: "POST",   //请求方式
-      data: data,       //将第5行的data赋值给data
-      success: function (res) {
-        // 成功后将 res.data.access_token 数据存到 Storage ，并定义名字 access_token
+      url: `https://itfun.tv/oauth/token`,
+      method: 'post',
+      data: data,
+      success: res => {
+        wx.setStorageSync('token_type', res.data.token_type, )
         wx.setStorageSync('access_token', res.data.access_token)
-        wx.setStorageSync('token_type', res.data.token_type)
-        console.log(res.data)
-
-        wx.switchTab({
-          url: '../find/find'   // 跳转到首页
-        })
-
+        if (res.statusCode === 200) {
+          wx.switchTab({
+            url: '/pages/mine/mine'
+          })
+        } else {
+          wx.removeStorageSync('access_token')
+          wx.removeStorageSync('token_type')
+          wx.showModal({
+            title: '登录信息有误',
+            content: '请重新登录',
+          })
+        }
       }
     })
-
   },
 
-
-  bindChange: function (e) {
-    // var that = this;
-    this.setData({ currentTab: e.detail.current });
-  },
-
-  swichNav: function (e) {
-    var that = this;
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentTab: e.target.dataset.current
-      })
+  register(e) {
+    const user = {
+      user: {
+        last_name: e.detail.value.last_name,
+        first_name: e.detail.value.first_name,
+        email: e.detail.value.email,
+        password: e.detail.value.password,
+        sex: e.detail.value.sex ? e.detail.value.sex:3
+      }
     }
+    console.log(user)
+    wx.request({
+      url: `https://itfun.tv/api/v1/users.json`,
+      method: 'post',
+      data: user,
+      success: res => {
+        console.log(res)
+        if (res.statusCode == 200) {
+          wx.setStorageSync('token_type', res.data.token_type)
+          wx.setStorageSync('access_token', res.data.access_token)
+          wx.showModal({
+            title: '注册成功',
+            content: '快去学习吧~',
+          })
+          wx.switchTab({
+            url: '/pages/mine/mine'
+          })
+        } else {
+          let errors = res.data.errors
+          this.setData({
+            error_email: errors.email ? errors.email:'',
+            error_password: errors.password ? errors.email : ''
+          })
+        }
+      }
+    })
   },
-  
+
+  toIndex() {
+    wx.switchTab({
+      url: '/pages/index/index'
+    })
+  }
 })

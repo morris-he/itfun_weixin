@@ -1,54 +1,99 @@
 // pages/mine/mine.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    user:{},
-    // tab切换 
-    currentTab: 0,
-    id:''
+    access_token: '',
+    navData:['我的主页','喜欢的课程','观看历史'],
+    currentIndex: 0,
+    user: {},
+    likeCourse: [],
+    learned: []
   },
-
   onLoad: function () {
-    let access_token = wx.getStorageSync('access_token')  //定义token为storage缓存的token
+    this.getUser()
+  },
+  onShow: function () {
+    this.getUser()
+  },
+  toLogin(){
+    wx.navigateTo({
+      url: '/pages/login/login'
+    })
+  },
+// 判断用户是否登录，未登录则不执行加载
+  getUser(){
     let token_type = wx.getStorageSync('token_type')
+    let access_token = wx.getStorageSync('access_token')
+    this.setData({
+      access_token: access_token
+    })
     if (access_token) {
       wx.request({
-        url: 'https://itfun.tv/api/v1/users/me.json',
+        url: `https://itfun.tv/api/v1/users/me.json`,
         header: {
           'Authorization': `${token_type} ${access_token}`
         },
-        success: (res) => {
-          console.log(res.data.user)
+        success: res => {
+          if (res.statusCode === 401) {
+            wx.removeStorageSync('access_token')
+            wx.removeStorageSync('token_type')
+            wx.navigateTo({
+              url: '/pages/login/login'
+            })
+            return
+          }
           this.setData({
             user: res.data.user,
-            id: res.data.user.id
+            access_token: access_token
           })
-          console.log(this.data.id)
-          
+          this.getLikeCourse()
+          this.getLearnings()
         }
       })
     } else {
-      wx.redirectTo({
-        url: '../login/login'
-      })
+      return false
     }
   },
 
-  bindChange: function (e) {
-    this.setData({ currentTab: e.detail.current });
+  getLikeCourse(){
+    let token_type = wx.getStorageSync('token_type')
+    let access_token = wx.getStorageSync('access_token')
+    wx.request({
+      url: `https://itfun.tv/api/v1/users/like_courses.json`,
+      header: {
+        'Authorization': `${token_type} ${access_token}`
+      },
+      success: res => {
+        this.setData({
+          likeCourse: res.data.courses
+        })
+      }
+    })
   },
 
-  swichNav: function (e) {
-    var that = this
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentTab: e.target.dataset.current
-      })
-    }
+  getLearnings(){
+    let token_type = wx.getStorageSync('token_type')
+    let access_token = wx.getStorageSync('access_token')
+    wx.request({
+      url: `https://itfun.tv/api/v1/users/learnings.json`,
+      header: {
+        'Authorization': `${token_type} ${access_token}`
+      },
+      success: res => {
+        this.setData({
+          learned: res.data.courses
+        })
+      }
+    })
+  },
+
+  changeNav(e){
+    this.setData({
+      currentIndex: e.currentTarget.dataset.index
+    })
+  },
+  changItem(e){
+    this.setData({
+      currentIndex: e.detail.current
+    })
   }
 })

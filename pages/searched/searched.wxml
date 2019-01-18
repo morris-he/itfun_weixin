@@ -1,0 +1,14 @@
+<view>
+  <view class="main" wx:for="{{courses}}">
+    <navigator url="/pages/courses/courses?id={{item.id}}">
+      <image src="{{item.photo}}"></image>
+    </navigator>
+    <view>
+      <text class="item-title">{{item.name}}</text>
+    </view>
+    <view class="item-body">
+      <text wx:if="{{item.body}}">{{item.body}}</text>
+      <text wx:else>暂无详情</text>
+    </view>
+  </view>
+</view>

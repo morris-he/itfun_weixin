@@ -1,0 +1,30 @@
+/* pages/news/news.wxss */
+.header{
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  background: #fff;
+  box-shadow: 0rpx 4rpx 4rpx #ccc;
+  padding: 20rpx 30rpx 20rpx 30rpx;
+  font-size: 35rpx;
+}
+.header image{
+  width: 35rpx;
+  height: 35rpx;
+  float: right;
+  margin-top: 5rpx;
+}
+.content{
+  padding: 86rpx 0 0 20rpx;
+}
+.news-item{
+  color: #4F4F4F;
+  padding: 20rpx 0;
+  font-size: 27rpx;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.news-item .created{
+  margin: 25rpx 15rpx 0 0;
+  float: right;
+}

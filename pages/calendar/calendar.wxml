@@ -1,0 +1,15 @@
+<!--pages/calendar/calendar.wxml-->
+<view class="container">
+  <view class="title">
+    <text>课程日历</text>
+  </view>
+  <view class="main">
+    <view class="item" wx:for="{{courses}}" wx:key="index">
+      <navigator url="/pages/courses/courses?id={{item.id}}">
+        <text class="created">{{item.created_at}}</text>
+        <image src="{{item.photo}}"></image>
+        <text>{{item.name}}</text>
+      </navigator>  
+    </view>
+  </view>
+</view>

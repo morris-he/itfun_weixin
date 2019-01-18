@@ -1,0 +1,47 @@
+/* pages/catorgories/catorgories.wxss */
+.nav{
+  background: #fff;
+  position: sticky;
+  z-index: 10;
+}
+.scroll{
+  display: flex;
+  width: 820rpx;
+  height: 77rpx;
+  border-bottom: 1px solid #ccc;
+}
+.scroll .nav-item{
+  padding-left: 25rpx;
+}
+.scroll .nav-item text{
+  display: inline-block;
+  font-size: 27rpx;
+  color: #999;
+  line-height: 75rpx;
+}
+.scroll .nav-item .active{
+  color: #5f5f62;
+  border-bottom: 4rpx solid #4996ad;
+}
+.main-item{
+  box-sizing: border-box;
+  padding:20rpx;
+}
+.main-item image{
+  width: 100%;
+  height: 320rpx;
+  border-radius: 8rpx;
+}
+.main-item .item-title{
+  font-size: 35rpx;
+  padding: 20rpx 0;
+}
+.main-item .item-body{
+  font-size: 25rpx;
+  color: #999;
+  height: 100rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

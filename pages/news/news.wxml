@@ -1,0 +1,17 @@
+<view class="header">
+  <text>新闻</text>
+  <image src="/assets/images/back.png" bindtap="toIndex"></image>
+</view>
+<view class="content">
+  <view class="news-item" wx:for="{{notices}}" wx:key="index">
+    <navigator
+     url="/pages/toWebview/toWebview?url=https://itfun.tv/news/{{item.id}}">
+      <view>
+        <text>{{item.title}}</text>
+      </view>
+      <view>
+        <text class="created">{{item.created_at}}</text>
+      </view>
+    </navigator>
+  </view>
+</view>

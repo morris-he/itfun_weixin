@@ -1,22 +1,27 @@
 // pages/search/search.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    focus: false,
-    inputValue: ''
+    hot: [
+      'Laravel', 'WorkerMan', 'HTML', 'CSS', 'JavaScript', 'ECMAScript 6',
+      'Web', 'MySQL', 'React Native', 'Vue', 'React', 'WebPack', 'PHP',
+      'Ruby On Rails'  
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    // this.search()
   },
-
-  searchBtn: function () {
-    console.log(123) 
+  search(e){
+    // console.log(e.detail.value)
+    let keyWord = e.detail.value
+    wx.navigateTo({
+      url: `/pages/searched/searched?keyWord=${keyWord}`,
+    })
+  },
+  searchHot(e){
+    console.log(e.currentTarget.dataset.keyword)
+    let keyWord = e.currentTarget.dataset.keyword
+    wx.navigateTo({
+      url: `/pages/searched/searched?keyWord=${keyWord}`,
+    })
   }
 })

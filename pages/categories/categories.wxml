@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="nav">
+    <scroll-view scroll-x scroll-left="{{currentIndex > 3 ? '300rpx' : '0rpx'}}">
+      <view class="scroll">
+        <view class="nav-item" wx:for="{{categorise}}" wx:key="index" bindtap="change" data-index="{{index}}">
+          <text class="{{index === currentIndex ? 'active' : ''}}">{{item.name}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view>
+   <!-- 因滚动bug未修复，暂时关掉滑块效果 -->
+    <!-- <swiper bindchange="changePage" current="{{currentIndex}}" class="swiper" style="height:{{bodyHeight}}"> -->
+    <!-- <block wx:for="{{categorise}}"> -->
+    <!-- <swiper-item> -->
+    <view class="main-item" wx:for="{{courses}}" wx:key="index" data-id="{{item.id}}" bindtap="toCourse">
+      <image src="{{item.photo}}"></image>
+      <view>
+        <text class="item-title">{{item.name}}</text>
+      </view>
+      <view class="item-body">
+        <text wx:if="{{item.body}}">{{item.body}}</text>
+        <text wx:else>暂无详情</text>
+      </view>
+    </view>
+    <!-- </swiper-item> -->
+    <!-- </block> -->
+    <!-- </swiper> -->
+  </view>
+</view>

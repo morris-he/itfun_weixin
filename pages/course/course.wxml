@@ -1,3 +1,0 @@
-<!--pages/course/course.wxml-->
-<import src="/towxml/entry.wxml"/>
-<template is="entry" data="{{...body}}"/>

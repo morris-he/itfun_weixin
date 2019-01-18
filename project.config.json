@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.1",
 	"appid": "wx9f98429bd8c5bc19",
-	"projectname": "itfun",
+	"projectname": "itfun_weixin",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

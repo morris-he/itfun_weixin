@@ -1,57 +1,106 @@
-.login {
+/* pages/login/login.wxss */
+.header{
+  box-shadow: 0rpx 4rpx 4rpx #ccc;
+  padding: 25rpx 20rpx;
+  font-size: 28rpx;
+  color: #1F99B0;
+  display: flex;
+  justify-content: space-between;
+}
+.header image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.header .button{
+  width: 500rpx;
   display: flex;
 }
-
-.login_title {
+.header .button view{
   flex: 1;
-  justify-content: center;
-  display: flex;
-  color: #1e87a0;
-  font-size: 34rpx;
-  padding: 30rpx;
+  border: 1px solid #1F99B0;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
 }
-
-.login_title:hover {
-  background-color: #1e87a0;
+.header .button .active{
+  background: #1F99B0;
   color: #fff;
 }
-
-.login_box {
-  margin: 40rpx;
+.header > text{
+  font-weight: bold;
 }
-
-.login_name {
-  margin-bottom: 40rpx;
-}
-
-.common {
+.log{
+  padding: 0 60rpx;
   font-size: 30rpx;
-  letter-spacing: 10rpx;
-  margin-bottom: 10rpx;
-  position: relative;
+  overflow: hidden;
 }
-
-.hint {
-  font-size: 22rpx;
-  position: absolute;
-  right: 0;
-  letter-spacing: normal;
+.log view{
+  margin-top: 40rpx;
 }
-
-.input {
-  background-color: #ededed;
-  margin-bottom: 10rpx;
+.log text{
+  line-height: 60rpx;
+  margin-left: 15rpx;
 }
-.sex_box{
-font-size: 30rpx;
-display: flex
+.log view input{
+  background-color: #EDEDED;
+  padding: 10rpx 15rpx;
+} 
+.log button{
+  width: 80%;
+  margin-top: 50rpx;
+  font-size: 32rpx;
+  background: #1f99b0;
+  color: #fff;
 }
-.radio_group{
- margin-left: 30rpx;
+.reg{
+  padding: 0 60rpx;
+  font-size: 30rpx;
+  overflow: hidden;
 }
-.radio{
-  padding-right: 20rpx;
+.reg .form-item{
+  margin-top: 40rpx;
 }
-button {
-  margin-top: 60rpx;
+.reg .name{
+  display: flex;
+  justify-content: space-between;
+}
+.reg .name view{
+  width: 310rpx;
+}
+.reg text{
+  line-height: 60rpx;
+  margin-left: 15rpx;
+}
+.desc{
+  font-size: 25rpx;
+}
+.right{
+  float: right;
+}
+.reg view input{
+  background-color: #EDEDED;
+  width: 100%;
+  padding: 10rpx 0;
+  text-indent: 15rpx;
+} 
+.reg radio-group{
+  display: flex;
+}
+.reg radio-group view{
+  flex: 1;
+  text-align: center;
+}
+.lable{
+  color: #1F99B0;
+}
+.reg button{
+  width: 80%;
+  margin-top: 50rpx;
+  font-size: 32rpx;
+  background: #1f99b0;
+  color: #fff;
+}
+.error{
+  font-size: 14px;
+  color: red;
 }

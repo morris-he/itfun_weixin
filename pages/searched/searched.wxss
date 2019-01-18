@@ -1,0 +1,22 @@
+.main{
+  box-sizing: border-box;
+  padding:20rpx;
+}
+.main image{
+  width: 100%;
+  height: 140px;
+  border-radius: 8rpx;
+}
+.main .item-title{
+  font-size: 35rpx;
+  padding: 20rpx 0;
+}
+.main .item-body{
+  font-size: 25rpx;
+  color: #999;
+  height: 100rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}

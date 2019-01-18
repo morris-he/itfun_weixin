@@ -1,0 +1,166 @@
+.header{
+width:100%;
+box-sizing:border-box;
+position:fixed;
+z-index:10;
+background:#fff;
+box-shadow:0rpx 4rpx 4rpx #eee;
+padding:16rpx;
+text-align:center;
+font-size:30rpx;
+}
+.container{
+  box-sizing: border-box;
+  padding-top: 69rpx;
+}
+.container image{
+  width: 100%;
+  height: 160px;
+}
+.desiption{
+  padding: 0 20rpx;
+}
+.total{
+  display: inline-block;
+  padding: 4rpx 25rpx;
+  font-size: 20rpx;
+  background: #1F99B0;
+  color: #fff;
+  border-radius: 5rpx;
+}
+.title{
+  font-weight: bold;
+  font-size: 38rpx;
+  margin: 20rpx 0;
+}
+.body{
+  font-size: 26rpx;
+  line-height: 40rpx;
+  word-break:break-all;
+}
+.hidden{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+/* 课程 */
+.content{
+  background-color: #fff; 
+  z-index: 10;
+  position: relative;
+}
+.opacity{
+  width: 100%;
+  height: 30rpx;
+  top: -30rpx;
+  position: absolute;
+  background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0))
+}
+.arrow{
+  margin: 0 auto 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.up_arrow{
+  transform: rotate(180deg);
+}
+.arrow image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.course-item{
+  display: flex;
+  padding-left: 70rpx;
+  align-items: center;
+  /* height: 150rpx; */
+  padding: 20rpx 0rpx 20rpx 70rpx;
+  border-bottom: 1px solid #ccc;
+  font-size: 32rpx;
+}
+.triangle{
+  border: 16rpx solid transparent;
+  border-left: 26rpx solid #1F99B0;
+  margin-right: 40rpx;
+}
+.title2{
+  margin-left: 30rpx;
+}
+.name{
+  margin-bottom: 20rpx;
+}
+.publish{
+  display: inline-block;
+  padding: 3rpx 25rpx;
+  font-size: 22rpx;
+  background: #1F99B0;
+  color: #fff;
+  border-radius: 5rpx;
+}
+.un-publish{
+  display: inline-block;
+  padding: 3rpx 25rpx;
+  font-size: 22rpx;
+  background: #ed7971;
+  color: #fff;
+  border-radius: 5rpx;
+}
+.updated-at{
+  color: #666;
+  font-size: 25rpx;
+  margin-left: 15rpx;
+}
+.teacher{
+  display: flex;
+  padding: 50rpx;
+  align-items: center;
+}
+.teacher .image{
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 50rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.teacher image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.teacher .name{
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+}
+.company{
+  font-size: 26rpx;
+  color: #656266;
+}
+.relation{
+  padding: 30rpx;
+  background: #F0EFF0;
+}
+.relation text{
+  font-size: 28rpx;
+}
+.relation-courses{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+.relation-item{
+  width: 280rpx;
+  background: #fff;
+  margin-right: 30rpx;
+}
+.relation-item image{
+  width: 280rpx;
+  height: 150rpx;
+}
+.relation-item view{
+  font-size: 26rpx;
+  padding: 15rpx;
+  height: 140rpx;
+}
+
+
+

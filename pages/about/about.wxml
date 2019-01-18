@@ -1,0 +1,25 @@
+<view class="content">
+<view class="title">关于我们</view>
+  <view class="about">
+    <view class="item">ITFun会员</view>
+    <navigator url="/pages/toWebview/toWebview?url={{url2}}">
+      <view class="item">关于ITFun的概况</view>
+    </navigator>  
+    <navigator url="/pages/toWebview/toWebview?url={{url3}}">
+      <view class="item bottom">长乐未央</view>
+    </navigator>   
+  </view>
+  <view class="title">线下培训</view>
+  <view class="learn">
+    <navigator url="/pages/toWebview/toWebview?url={{url4}}">
+      <view class="item">培训简介</view>
+    </navigator>
+    <navigator url="/pages/toWebview/toWebview?url={{url5}}">
+      <view class="item">Web前端培训</view>
+    </navigator>
+    <navigator url="/pages/toWebview/toWebview?url={{url6}}">
+      <view class="item bottom">PHP培训</view>
+    </navigator>
+  </view>
+  <view class="item quit" bindtap="quit">安全退出</view>
+</view>

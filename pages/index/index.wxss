@@ -1,103 +1,149 @@
-/* 隐藏滚动条 */
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  color: transparent;
+/**index.wxss**/
+.search_box{
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 20rpx;
+  background-color: #f9f9f9;
+  color: #d1d1d1;
+  position: relative
 }
-
-.main{
-    margin: 0 30rpx;
-}
-
-.category{
-  font-size: 30rpx;
-  margin: 30rpx 0;
-  font-weight:bold;
-}
-
-.name{
-  color: #68BFCD;
-  font-size: 40rpx;
-  font-weight:560;
-}
-
-/* 轮播图*/
-.wrap{
-  position: relative;  
-  padding-bottom:120rpx;
-  border-bottom: 1px solid #ddd
-}
-
-.swipers{
-  height:440rpx;
-}
-
-.slide-image{
-  border-radius: 10rpx;
-  width: 100%;
-  height:360rpx
-}
- 
-/*用来包裹所有的小圆点  */
-.dots{  
-  width: 180rpx;
-  height: 36rpx; 
-  display: flex;
-  flex-direction: row;
+.icon-bell{
   position: absolute;
-  left: 40%;
-  bottom:60rpx;
-}  
-/*未选中时的小圆点样式 */
-.dot{  
-  width: 16rpx;  
-  height: 16rpx;   
-  border-radius: 50%;
-  margin-right: 26rpx;
-  background-color:#eee;
-}  
-/*选中以后的小圆点样式  */
-.active{  
-  background-color: coral;
+  top: 15rpx;
 }
-
-.create_time{
-  color: #37A3B8;
-  font-size:22rpx;
+.icon-magnifier{
+  position: absolute;
+  right: 100rpx;
+  top: 15rpx
 }
-
-.lesson_name{
-  color: #2E3D48;
-  font-size: 30rpx;
+.icon-options{
+ position: absolute;
+  right:40rpx;
+  top: 15rpx
 }
-
-.hot{
-    margin-top:60rpx;
+.header{
+  box-sizing: border-box;
+  width: 100%; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0rpx 4rpx 4rpx #ccc;
+  padding: 20rpx  20rpx 10rpx 20rpx;
 }
-.hot_top{
-  font-size: 30rpx;
-  font-weight:bold;
+.header image{
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
 }
-
-.hot_class{
-  width: 5000rpx;
-  margin-bottom: 20rpx;
+.header .sarch {
+  margin-right: 40rpx;
 }
-
-.image_box{
+.header image:first-child{
   float: left;
 }
-
-.image_box image{
-  width:400rpx;
-  height: 200rpx;
-  padding-right: 16rpx;
+.header text{
+  vertical-align: super;
+  margin-left: 100rpx;
+  font-size: 40rpx;
 }
-
-.image_name{
-    padding:0 16rpx;
-    color: #2E3D48;
-    font-size:26rpx;
+.swiper{
+  padding-top: 100rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 800rpx;
+  padding: 0 20rpx;
 }
-
-
+.swiper .title{
+  display: flex;
+  flex-direction: column;
+  margin-top: 25rpx;
+}
+.swiper .title .found{
+  font-size: 45rpx;
+  font-weight: bold;
+  color: #1F99B0;
+}
+.swiper .title .recommend{
+  line-height: 100rpx;
+  font-weight: bold;
+}
+.swiper swiper{
+  width: 100%;
+  height: 500rpx;
+}
+.swiper swiper swiper-item{
+  display: flex;
+  flex-direction: column;
+}
+.swiper swiper image{
+  width: 100%;
+  height: 380rpx;
+  border-radius: 8rpx;
+}
+.swiper swiper text{
+  color: #333;
+  font-size: 35rpx;
+}
+.swiper swiper .created{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #1F99B0;
+}
+.swiper .dots{
+  display: flex;
+  justify-content: center;
+  padding: 50rpx 0;
+}
+.swiper .dots view{
+  width: 14rpx;
+  height: 14rpx;
+  background: #ccc;
+  border-radius: 50%;
+  margin-left: 15rpx;
+}
+.swiper .dots .dot-active{
+  background: #1F99B0;
+}
+.border-bottom{
+  border-bottom: 1px solid #ccc;
+}
+.new_courses{
+  height: 520rpx;
+}
+scroll-view{
+  height: 450rpx;
+}
+scroll-view .scroll{
+  height: 450rpx;
+  margin-left: 15rpx;
+  display: flex;
+  flex-direction: column;
+}
+scroll-view .scroll view{
+  margin-top: 15rpx;
+  font-size: 28rpx;
+}
+scroll-view .scroll .created{
+  font-size: 28rpx;
+  color: #666;
+}
+scroll-view .scroll image{
+  width: 200px;
+  height: 115px;
+  border-radius: 8rpx;
+}
+.likes_courses{
+  height: 450rpx;
+}
+.recommended{
+  height: 450rpx;
+}
+.title2{
+  margin-left: 20rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+}

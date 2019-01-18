@@ -1,0 +1,65 @@
+<!-- 标题 -->
+<view class="header">
+  <text>{{course.name}}</text>
+</view>
+<!-- 内容 -->
+<view class="container">
+  <!-- 课程介绍 -->
+  <image src="{{course.photo}}"></image>
+  <view class="desiption">
+    <view class="total">全{{chapters.length}}回</view>
+    <view class="title">{{course.name}}</view>
+    <view class="body {{isShow === true ? 'show' : 'hidden'}}">
+      <view wx:if="{{course.body == null}}">
+        暂无内容
+      </view>
+      <view wx:else>
+        {{course.body}}
+      </view>
+    </view>
+  </view>
+  <!-- 章节列表 -->
+  <view class="content">
+    <view class="{{isShow === false ? 'opacity' : ''}}"></view>
+    <view class="arrow{{isShow === false ? '' : ' up_arrow'}}" bindtap="changeBody">
+      <image src="/assets/images/arrow.png"></image>
+    </view>
+    <view class="course-item" wx:for="{{chapters}}" wx:key="index" data-item="{{item}}" bindtap="toChapters">
+      <view class="triangle">
+      </view>
+      <text>{{index + 1}}</text>
+      <view class="title2">
+        <view class="name">{{item.title}}</view>
+        <view>
+          <text class="publish" wx:if="{{item.publish === true}}">免费</text>
+          <text class="un-publish" wx:else>未发布</text>
+          <text class="updated-at">{{item.updated_at}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 发布老师 -->
+    <view class="teacher">
+      <view class="image">
+        <image src="{{teacher.avatar}}"></image>
+      </view>
+      <view>
+        <text class="name">{{teacher.fullname}}</text>
+        <view class="company">{{teacher.company}}</view>
+      </view>
+    </view>
+    <!-- 相关课程 -->
+    <view class="relation">
+      <text>相关课程</text>
+      <scroll-view scroll-x>
+        <view class="relation-courses">
+          <view class="relation-item" bindtap="toCourse" data-id="{{item.id}}" wx:for="{{relation_courses}}" wx:key="index">
+            <image src="{{item.photo}}"></image>
+            <view>
+              <text>{{item.title}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

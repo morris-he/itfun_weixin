@@ -54,6 +54,10 @@
   border-right: 1rpx solid #ccc;
   overflow: scroll;
 }
+.side_list{
+  display: inline-block;
+  width: 400rpx;
+}
 .show-side{
   transform: translate(80%,0%);
   transition: all 0.5s ease 0s; 

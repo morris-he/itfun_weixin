@@ -1,2 +1,14 @@
 <!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+<view class="container">
+  <view class="side">
+    <view class="left"></view>
+    <view class='cover'></view>
+  </view>
+  <view class="main">
+    <view class="video">
+      <video src=""></video>
+    </view>
+    <view class="scroll">
+    </view>
+  </view>
+</view>

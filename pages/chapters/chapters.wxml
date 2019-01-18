@@ -4,14 +4,14 @@
   <view class="side">
     <view class="title">
       <text>{{course.name}}</text>
-      <image src="../../asstes/image/back.png" bindtap="showSide"></image>
+      <image src="/assets/images/back.png" bindtap="showSide"></image>
     </view>
     <view class="chapters">
-      <view wx:for="{{chapters}}" class="chapter-item"
+      <view wx:for="{{chapters}}" wx:key="index" class="chapter-item"
       data-id="{{item.id}}"
       bindtap="toCourse">
-        <image src="../../asstes/image/play.png"></image>
-        <text>{{item.title}}</text>
+        <image src="/assets/images/play.png"></image>
+        <text class='side_list'>{{item.title}}</text>
         <text class="time">{{item.time}}</text>
       </view>
     </view>
@@ -31,7 +31,7 @@
   </view>
   <view class="content">
     <view class="course-list" bindtap="showSide">
-      <image src="../../asstes/image/list.png"></image>
+      <image src="/assets/images/list.png"></image>
       <text>课程列表</text>
     </view>
     <scroll-view scroll-y style="height: 800rpx;">
