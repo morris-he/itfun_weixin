@@ -17,7 +17,7 @@
   "window": {
     "navigationBarBackgroundColor": "#1F99B0",
     "navigationBarTitleText": "长乐未央",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#a9b7b7",

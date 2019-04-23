@@ -19,9 +19,9 @@
     </view>
   </view>
   <!-- 章节列表 -->
-  <view class="content">
-    <view class="{{isShow === false ? 'opacity' : ''}}"></view>
-    <view class="arrow{{isShow === false ? '' : ' up_arrow'}}" bindtap="changeBody">
+  <view class="content" positon:relative>
+    <view wx:if="{{course.body != null}}" class="{{isShow === false ? 'opacity' : ''}}"></view>
+    <view wx:if="{{course.body != null}}" class="arrow{{isShow === false ? '' : ' up_arrow'}}" bindtap="changeBody">
       <image src="/assets/images/arrow.png"></image>
     </view>
     <view class="course-item" wx:for="{{chapters}}" wx:key="index" data-item="{{item}}" bindtap="toChapters">

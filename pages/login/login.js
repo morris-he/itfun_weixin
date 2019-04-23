@@ -28,6 +28,7 @@ Page({
     })
   },
   login(e) {
+    console.log(e)
     const data = {
       grant_type: 'password',
       client_id: 'c60de69e571fae852bea53e347a2be36503ebba84247a054cb7eb6549d161ac9',
@@ -37,7 +38,7 @@ Page({
     }
     wx.request({
       url: `https://itfun.tv/oauth/token`,
-      method: 'post',
+      method: 'POST',
       data: data,
       success: res => {
         wx.setStorageSync('token_type', res.data.token_type, )
@@ -81,15 +82,23 @@ Page({
           wx.showModal({
             title: '注册成功',
             content: '快去学习吧~',
-          })
-          wx.switchTab({
-            url: '/pages/mine/mine'
+            showCancel:false,
+            success(res) {
+              if (res.confirm) {
+                wx.switchTab({
+                  url: '/pages/mine/mine'
+                })
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
           })
         } else {
           let errors = res.data.errors
+          console.log(errors)
           this.setData({
-            error_email: errors.email ? errors.email:'',
-            error_password: errors.password ? errors.email : ''
+            error_email: errors.email ? "* "+errors.email:'',
+            error_password: errors.password ? "* " +errors.password : ''
           })
         }
       }

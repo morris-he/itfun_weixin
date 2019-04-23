@@ -78,7 +78,7 @@
           <text>没有记录</text>
         </view>
       </view>
-      <view wx:else>
+      <view  wx:else>
         <view class="main" wx:for="{{learned}}" wx:key="index">
           <navigator url="/pages/courses/courses?id={{item.id}}">
             <image src="{{item.photo}}"></image>

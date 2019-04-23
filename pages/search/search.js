@@ -11,7 +11,7 @@ Page({
     // this.search()
   },
   search(e){
-    // console.log(e.detail.value)
+    console.log(e.detail.value)
     let keyWord = e.detail.value
     wx.navigateTo({
       url: `/pages/searched/searched?keyWord=${keyWord}`,
