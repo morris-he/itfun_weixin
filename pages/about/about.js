@@ -1,4 +1,5 @@
 // pages/about/about.js
+// pages/about/about.js
 Page({
   data: {
     url1: 'https://itfun.tv/premiums',
