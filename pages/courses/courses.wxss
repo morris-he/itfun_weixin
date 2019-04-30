@@ -38,7 +38,15 @@ font-size:30rpx;
   line-height: 40rpx;
   word-break:break-all;
 }
+.show{
+overflow: visible;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: none;
+transition: all 2s ease 0ms;
+}
 .hidden{
+  transition: all 2s ease 0ms;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;

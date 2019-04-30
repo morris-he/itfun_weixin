@@ -13,6 +13,7 @@
     <!-- <swiper bindchange="changePage" current="{{currentIndex}}" class="swiper" style="height:{{bodyHeight}}"> -->
     <!-- <block wx:for="{{categorise}}"> -->
     <!-- <swiper-item> -->
+      
     <view class="main-item" wx:for="{{courses}}" wx:key="index" data-id="{{item.id}}" bindtap="toCourse">
       <image src="{{item.photo}}"></image>
       <view>
@@ -23,6 +24,7 @@
         <text wx:else>暂无详情</text>
       </view>
     </view>
+   
     <!-- </swiper-item> -->
     <!-- </block> -->
     <!-- </swiper> -->

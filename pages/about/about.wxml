@@ -4,10 +4,10 @@
     <view class="item">ITFun会员</view>
     <navigator url="/pages/toWebview/toWebview?url={{url2}}">
       <view class="item">关于ITFun的概况</view>
-    </navigator>  
+    </navigator>
     <navigator url="/pages/toWebview/toWebview?url={{url3}}">
       <view class="item bottom">长乐未央</view>
-    </navigator>   
+    </navigator>
   </view>
   <view class="title">线下培训</view>
   <view class="learn">

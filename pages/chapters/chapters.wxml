@@ -26,7 +26,7 @@
     <text>{{chapter.title}}</text>
   </view>
   <view class="video">
-    <video controls src="{{chapter.video}}"
+    <video controls="{{false}}" src="{{chapter.video}}"
     poster="{{chapter.photo}}"></video>
   </view>
   <view class="content">

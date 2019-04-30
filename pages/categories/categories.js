@@ -16,7 +16,7 @@ Page({
       success: res => {
         let slugs = res.data.categories.map( item => {
           return item.slug
-        }) 
+        })
         this.setData({
           categorise: res.data.categories,
           slugs: slugs
@@ -59,6 +59,7 @@ Page({
   //   })
   // },
   toCourse(e){
+    console.log(e)
     let id = e.currentTarget.dataset.id
     wx.navigateTo({
       url: `/pages/courses/courses?id=${id}`

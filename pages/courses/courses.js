@@ -8,7 +8,6 @@ Page({
     isShow: false
   },
   onLoad: function (options) {
-    console.log(options.id)
     let id = options.id
     wx.request({
       url: `https://itfun.tv/api/v1/courses/${id}.json`,
