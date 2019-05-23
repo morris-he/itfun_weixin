@@ -10,7 +10,7 @@
 <view class="swiper">
   <view class="title">
     <text class="found">发现</text>
-    <text class="recommend">推荐课程</text>
+    <text class="recommend">推荐</text>
   </view>
   <swiper circular="true" bindchange="changeDots" autoplay="true">
     <block wx:for="{{slide_courses}}" wx:key='index'>
