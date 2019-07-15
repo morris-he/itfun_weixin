@@ -25,6 +25,7 @@ Page({
       }
     })
   },
+  
   initCourses(){
     let slug = this.data.slugs[this.data.currentIndex]
     wx.request({
@@ -38,6 +39,7 @@ Page({
     })
   },
   change(e){
+    console.log(e)
     let index = e.currentTarget.dataset.index
     this.setData({
       currentIndex: index
