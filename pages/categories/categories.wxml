@@ -2,7 +2,7 @@
   <view class="nav">
     <scroll-view scroll-x scroll-left="{{currentIndex > 3 ? '300rpx' : '0rpx'}}">
       <view class="scroll">
-        <view class="nav-item" wx:for="{{categorise}}" wx:key="index" bindtap="change" data-index="{{index}}">
+        <view class="nav-item" wx:for="{{categorise}}" wx:key="index" bindtap="change" data-slug="{{item.slug}}" data-index="{{index}}">
           <text class="{{index === currentIndex ? 'active' : ''}}">{{item.name}}</text>
         </view>
       </view>

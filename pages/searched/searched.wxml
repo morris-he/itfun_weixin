@@ -1,5 +1,5 @@
-<view>
-  <view class="main" wx:for="{{courses}}">
+<view wx:if='{{courses.length > 0}}'>
+  <view class="main" wx:for="{{courses}}" >
     <navigator url="/pages/courses/courses?id={{item.id}}">
       <image src="{{item.photo}}"></image>
     </navigator>
@@ -10,5 +10,9 @@
       <text wx:if="{{item.body}}">{{item.body}}</text>
       <text wx:else>暂无详情</text>
     </view>
-  </view>
+  </view> 
 </view>
+
+  <view wx:else>
+   暂无课程
+  </view>

@@ -22,8 +22,8 @@
       <button form-type="submit">登录</button>
     </form>
   </view>
-  <view class="reg" wx:else>
 
+  <view class="reg" wx:else>
     <form bindsubmit="register">
       <view class="name form-item">
         <view>
@@ -55,6 +55,7 @@
               <text class='lable'>{{item.name}}</text>
             </label>
             <radio value="{{item.value}}" />
+
           </view>
         </radio-group>
       </view>

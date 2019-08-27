@@ -13,7 +13,6 @@ Page({
     wx.request({
       url: `https://itfun.tv/api/v1/chapters/${id}.json`,
       success: res => {
-        console.log(res)
         let data = app.towxml.toJson(
           res.data.chapter.body,               // `markdown`或`html`文本内容
           'markdown'              // `markdown`或`html`

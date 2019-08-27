@@ -46,7 +46,6 @@ overflow: visible;
 transition: all 2s ease 0ms;
 }
 .hidden{
-  transition: all 2s ease 0ms;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;

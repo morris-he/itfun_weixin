@@ -16,10 +16,8 @@ Page({
         value: 3
       }
     ],
-
     error_email: '',
     error_password: ""
-
   },
   onLoad: function() {},
   change(e) {
@@ -28,7 +26,6 @@ Page({
     })
   },
   login(e) {
-    console.log(e)
     const data = {
       grant_type: 'password',
       client_id: 'c60de69e571fae852bea53e347a2be36503ebba84247a054cb7eb6549d161ac9',
@@ -41,6 +38,7 @@ Page({
       method: 'POST',
       data: data,
       success: res => {
+        console.log(res)
         wx.setStorageSync('token_type', res.data.token_type, )
         wx.setStorageSync('access_token', res.data.access_token)
         if (res.statusCode === 200) {
@@ -48,11 +46,11 @@ Page({
             url: '/pages/mine/mine'
           })
         } else {
-          wx.removeStorageSync('access_token')
-          wx.removeStorageSync('token_type')
+
           wx.showModal({
             title: '登录信息有误',
             content: '请重新登录',
+            showCancel:false
           })
         }
       }
@@ -60,7 +58,7 @@ Page({
   },
 
   register(e) {
-    const user = {
+    const data = {
       user: {
         last_name: e.detail.value.last_name,
         first_name: e.detail.value.first_name,
@@ -69,13 +67,11 @@ Page({
         sex: e.detail.value.sex ? e.detail.value.sex:3
       }
     }
-    console.log(user)
     wx.request({
       url: `https://itfun.tv/api/v1/users.json`,
       method: 'post',
-      data: user,
+      data: data,
       success: res => {
-        console.log(res)
         if (res.statusCode == 200) {
           wx.setStorageSync('token_type', res.data.token_type)
           wx.setStorageSync('access_token', res.data.access_token)
@@ -88,8 +84,6 @@ Page({
                 wx.switchTab({
                   url: '/pages/mine/mine'
                 })
-              } else if (res.cancel) {
-                console.log('用户点击取消')
               }
             }
           })

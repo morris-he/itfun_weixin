@@ -43,6 +43,7 @@
           <text wx:if="{{user.introduce}}">{{user.introduce}}</text>
           <text wx:else>暂无</text>
         </view>
+        <view bindtap='quit'>点击退出</view>
       </view>
     </view>
     <view wx:elif="{{currentIndex === 1}}">
@@ -78,7 +79,7 @@
           <text>没有记录</text>
         </view>
       </view>
-      <view  wx:else>
+      <view wx:else>
         <view class="main" wx:for="{{learned}}" wx:key="index">
           <navigator url="/pages/courses/courses?id={{item.id}}">
             <image src="{{item.photo}}"></image>

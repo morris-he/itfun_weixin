@@ -25,13 +25,11 @@ Page({
       }
     })
   },
-  
   initCourses(){
     let slug = this.data.slugs[this.data.currentIndex]
     wx.request({
       url: `https://itfun.tv/api/v1/categories/${slug}.json`,
-      success: res => {
-        // console.log(res)
+      success: (res) => {
         this.setData({
           courses: res.data.courses
         })
@@ -61,7 +59,6 @@ Page({
   //   })
   // },
   toCourse(e){
-    console.log(e)
     let id = e.currentTarget.dataset.id
     wx.navigateTo({
       url: `/pages/courses/courses?id=${id}`

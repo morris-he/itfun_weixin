@@ -2,6 +2,7 @@
 @import '/towxml/style/main.wxss';
 @import '/towxml/style/theme/light.wxss';
 @import '/towxml/style/theme/dark.wxss';
+
 .main{
   background: #fff;
 }
@@ -23,9 +24,6 @@
 }
 .video video{
   width: 100%;
-}
-.content{
-
 }
 .course-list{
   display: flex;

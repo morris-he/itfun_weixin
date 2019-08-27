@@ -8,9 +8,6 @@ Page({
     sliderIndex: 0
   },
   onLoad: function () {
-    this.init()
-  },
-  init() {
     wx.request({
       url: `https://itfun.tv/api/v1/home.json`,
       success: res => {
@@ -20,18 +17,19 @@ Page({
           likes_courses: res.data.likes_courses,
           recommended_courses: res.data.recommended_courses
         })
-        console.log(this.data)
       }
     })
   },
-  changeDots(e){    
+  changeDots(e){ 
+    console.log(e)   
     this.setData({
       sliderIndex: e.detail.current
     })
   },
 
   // 首页顶部跳转部分
-  toNews() {
+  toNews(e) {
+    console.log(e)
     wx.navigateTo({
       url: `/pages/news/news`,
     })

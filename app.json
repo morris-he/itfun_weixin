@@ -11,8 +11,7 @@
     "pages/about/about",
     "pages/search/search",
     "pages/searched/searched",
-    "pages/toWebview/toWebview",
-    "pages/test/test"
+    "pages/toWebview/toWebview"
   ],
   "window": {
     "navigationBarBackgroundColor": "#1F99B0",
@@ -51,4 +50,4 @@
     ]
   },
   "sitemapLocation": "sitemap.json"
-}
+} 

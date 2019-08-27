@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.1",
-	"appid": "wx9f98429bd8c5bc19",
+	"appid": "wxf10e4d931aad21c9",
 	"projectname": "itfun_weixin",
 	"isGameTourist": false,
 	"simulatorType": "wechat",
@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -72,6 +72,19 @@
 					"name": "课程内页",
 					"pathName": "pages/courses/courses",
 					"query": "id=28",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "课程详情",
+					"pathName": "pages/chapters/chapters",
+					"query": "id=185",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的页面",
+					"pathName": "pages/mine/mine",
 					"scene": null
 				}
 			]

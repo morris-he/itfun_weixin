@@ -1,6 +1,6 @@
 <import src="/towxml/entry.wxml"/>
 <!-- 左侧导航 -->
-<view class="nav">
+
   <view class="side">
     <view class="title">
       <text>{{course.name}}</text>
@@ -18,7 +18,6 @@
   </view>
   <view class="{{showSide === true ? 'cover' : ''}}" bindtap="showSide">
   </view>
-</view>
 
 <!-- 主体内容 -->
 <view class="main {{showSide === true ? 'show-side' : 'hidden-side'}}">
@@ -26,7 +25,7 @@
     <text>{{chapter.title}}</text>
   </view>
   <view class="video">
-    <video controls="{{false}}" src="{{chapter.video}}"
+    <video src="{{chapter.video}}"
     poster="{{chapter.photo}}"></video>
   </view>
   <view class="content">

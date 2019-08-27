@@ -1,10 +1,9 @@
-
 <!-- 顶部跳转 -->
-  <view class='search_box'>
-      <text bindtap="toNews" class='icon-bell'></text>
-      <text bindtap="toSearch" class='icon-magnifier'></text>
-      <text bindtap="toAbout" class='icon-options'></text>
-  </view>
+<view class='search_box'>
+  <text bindtap="toNews" class='icon-bell'></text>
+  <text bindtap="toSearch" class='icon-magnifier'></text>
+  <text bindtap="toAbout" class='icon-options'></text>
+</view>
 
 <!-- 轮播部分 -->
 <view class="swiper">
@@ -19,14 +18,16 @@
           <image src="{{item.photo}}"></image>
           <text class="created">{{item.created_at}}</text>
           <text>{{item.name}}</text>
-          <text>{{item.desc}}</text>
+          <text style='font-size:12px'>{{item.updated_at}}</text>
         </swiper-item>
       </navigator>
     </block>
   </swiper>
+
+
   <view class="dots">
     <block wx:for="{{slide_courses}}" wx:key='index'>
-      <view class="{{index === sliderIndex ? 'dot-active' : ''}}"></view>
+           <view class="{{index == sliderIndex ? 'dot-active' : ''}}"></view>
     </block>
   </view>
   <view class="border-bottom"></view>
@@ -39,9 +40,9 @@
     <view style="display: flex;">
       <view class="scroll" wx:for="{{new_courses}}" wx:key='index'>
         <navigator url="/pages/courses/courses?id={{item.id}}">
-          <image src="{{item.photo}}"></image>
-          <view>{{item.name}}</view>
-          <text class="created">{{item.created_at}}</text>
+        <image src="{{item.photo}}"></image>
+        <view>{{item.name}}</view>
+        <text class="created">{{item.created_at}}</text>
         </navigator>
       </view>
     </view>
@@ -49,29 +50,33 @@
 </view>
 <view class="likes_courses">
   <text class="title2">最受欢迎的课程</text>
-  <scroll-view scroll-x="false" style="width: 100%">
+  <scroll-view scroll-x >
+
+
     <view style="display: flex;">
+
       <view class="scroll" wx:for="{{likes_courses}}" wx:key='index'>
         <navigator url="/pages/courses/courses?id={{item.id}}">
           <image src="{{item.photo}}"></image>
           <view>{{item.name}}</view>
         </navigator>
       </view>
+
     </view>
+
   </scroll-view>
 </view>
+
 <view class="recommended">
   <text class="title2">入门课程</text>
   <scroll-view scroll-x>
     <view style="display: flex;">
       <view class="scroll" wx:for="{{recommended_courses}}" wx:key='index'>
         <navigator url="/pages/courses/courses?id={{item.id}}">
-        <view>
-           <image src="{{item.photo}}"></image>
-           <view>1234</view>
-        </view>
-
-          <view>{{item.name}}</view>
+          <view>
+            <image src="{{item.photo}}"></image>
+            <view>{{item.name}}</view>
+          </view>
         </navigator>
       </view>
     </view>

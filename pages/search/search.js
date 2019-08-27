@@ -11,14 +11,12 @@ Page({
     // this.search()
   },
   search(e){
-    console.log(e.detail.value)
     let keyWord = e.detail.value
     wx.navigateTo({
       url: `/pages/searched/searched?keyWord=${keyWord}`,
     })
   },
   searchHot(e){
-    console.log(e.currentTarget.dataset.keyword)
     let keyWord = e.currentTarget.dataset.keyword
     wx.navigateTo({
       url: `/pages/searched/searched?keyWord=${keyWord}`,

@@ -95,5 +95,11 @@ Page({
     this.setData({
       currentIndex: e.detail.current
     })
+  },
+  quit() {
+    // wx.showLoading({ title: '退出登陆中' })
+    wx.removeStorageSync('access_token')
+    wx.removeStorageSync('token_type')
+    this.getUser()
   }
 })
