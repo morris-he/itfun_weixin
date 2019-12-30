@@ -4,7 +4,7 @@
   <text bindtap="toSearch" class='icon-magnifier'></text>
   <text bindtap="toAbout" class='icon-options'></text>
 </view>
-
+<!--测试一下-->
 <!-- 轮播部分 -->
 <view class="swiper">
   <view class="title">
@@ -29,7 +29,7 @@
            <view class="{{index == sliderIndex ? 'dot-active' : ''}}"></view>
     </block>
   </view>
-  
+
   <view class="border-bottom"></view>
 </view>
 
