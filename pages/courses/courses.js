@@ -8,6 +8,7 @@ Page({
     isShow: false
   },
   onLoad: function (options) {
+    console.log(options)
     let id = options.id
     wx.request({
       url: `https://itfun.tv/api/v1/courses/${id}.json`,
@@ -34,6 +35,7 @@ Page({
     })
   },
   toChapters(e){
+    console.log(e)
     let id = e.currentTarget.dataset.item.id
     // console.log(id)
     if(e.currentTarget.dataset.item.publish === false){

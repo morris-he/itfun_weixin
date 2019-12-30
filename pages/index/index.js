@@ -10,7 +10,7 @@ Page({
   onLoad: function () {
     wx.request({
       url: `https://itfun.tv/api/v1/home.json`,
-      success: res => {
+      success:(res)=> {
         this.setData({
           slide_courses: res.data.slide_courses,
           new_courses: res.data.new_courses,

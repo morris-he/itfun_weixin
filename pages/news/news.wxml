@@ -4,13 +4,12 @@
 </view>
 <view class="content">
   <view class="news-item" wx:for="{{notices}}" wx:key="index">
-    <!-- <navigator url="/pages/toWebview/toWebview?url=https://itfun.tv/news/{{item.id}}"> -->
+
       <view bindtap='go' data-id='{{item.id}}'>
         <text>{{item.title}}</text>
       </view>
       <view>
         <text class="created">{{item.created_at}}</text>
       </view>
-    <!-- </navigator> -->
   </view>
 </view>

@@ -6,10 +6,15 @@ Page({
     chapters: [],
     course: {},
     showSide: false,
-    body: ''
+    body: '',
+    chapter_id:''
   },
   onLoad: function (options) {
     let id = options.id
+    console.log(id)
+    this.setData({
+      chapter_id:id
+    })
     wx.request({
       url: `https://itfun.tv/api/v1/chapters/${id}.json`,
       success: res => {

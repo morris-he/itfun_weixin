@@ -1,4 +1,10 @@
 /* pages/catorgories/catorgories.wxss */
+
+
+.container{
+  height: 100%;
+}
+
 .nav{
   background: #fff;
   position: sticky;

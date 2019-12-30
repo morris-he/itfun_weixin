@@ -9,7 +9,7 @@
   <view class="desiption">
     <view class="total">全{{chapters.length}}回</view>
     <view class="title">{{course.name}}</view>
-    <view class="body {{isShow === true ? 'show' : 'hidden'}}">
+    <view class="body {{isShow ? 'show' : 'hidden'}}">
       <view wx:if="{{course.body == null}}">
         暂无内容
       </view>
@@ -21,10 +21,13 @@
   <!-- 章节列表 -->
   <view class="content" positon:relative>
     <view wx:if="{{course.body != null}}" class="{{isShow === false ? 'opacity' : ''}}"></view>
-    <view wx:if="{{course.body != null}}" class="arrow{{isShow === false ? '' : ' up_arrow'}}" bindtap="changeBody">
+    <view wx:if="{{course.body != null}}" class="arrow{{!isShow ? '' : ' up_arrow'}}" bindtap="changeBody">
       <image src="/assets/images/arrow.png"></image>
     </view>
-    <view class="course-item" wx:for="{{chapters}}" wx:key="index" data-item="{{item}}" bindtap="toChapters">
+
+    <view wx:for="{{chapters}}" wx:key="index" data-item="{{item}}" bindtap="toChapters">
+
+    <view class="course-item {{item.id==chapter_id?'bg':''}}" >
       <view class="triangle">
       </view>
       <text>{{index + 1}}</text>
@@ -37,6 +40,10 @@
         </view>
       </view>
     </view>
+
+    </view>
+
+    
     <!-- 发布老师 -->
     <view class="teacher">
       <view class="image">

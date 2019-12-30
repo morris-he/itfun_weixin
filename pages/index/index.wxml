@@ -24,12 +24,12 @@
     </block>
   </swiper>
 
-
   <view class="dots">
     <block wx:for="{{slide_courses}}" wx:key='index'>
            <view class="{{index == sliderIndex ? 'dot-active' : ''}}"></view>
     </block>
   </view>
+  
   <view class="border-bottom"></view>
 </view>
 

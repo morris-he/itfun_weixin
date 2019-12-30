@@ -39,11 +39,11 @@ font-size:30rpx;
   word-break:break-all;
 }
 .show{
-overflow: visible;
+  overflow: visible;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: none;
-transition: all 2s ease 0ms;
+  transition: all 2s ease 0ms;
 }
 .hidden{
   overflow: hidden;

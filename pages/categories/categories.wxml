@@ -9,24 +9,22 @@
     </scroll-view>
   </view>
   <view>
-   <!-- 因滚动bug未修复，暂时关掉滑块效果 -->
-    <!-- <swiper bindchange="changePage" current="{{currentIndex}}" class="swiper" style="height:{{bodyHeight}}"> -->
-    <!-- <block wx:for="{{categorise}}"> -->
-    <!-- <swiper-item> -->
-      
-    <view class="main-item" wx:for="{{courses}}" wx:key="index" data-id="{{item.id}}" bindtap="toCourse">
-      <image src="{{item.photo}}"></image>
-      <view>
-        <text class="item-title">{{item.name}}</text>
-      </view>
-      <view class="item-body">
-        <text wx:if="{{item.body}}">{{item.body}}</text>
-        <text wx:else>暂无详情</text>
-      </view>
-    </view>
-   
-    <!-- </swiper-item> -->
-    <!-- </block> -->
-    <!-- </swiper> -->
+    <!-- 因滚动bug未修复，暂时关掉滑块效果 -->
+    <swiper bindchange="changePage" current="{{currentIndex}}" class="swiper" style="height:{{bodyHeight}}">
+      <block wx:for="{{categorise}}" wx:key='item.id' >
+        <swiper-item>
+          <view wx:for="{{courses}}" wx:key='item.id' class="main-item" data-id="{{item.id}}" bindtap="toCourse">
+          <image src="{{item.photo}}"></image>
+          <view>
+            <text class="item-title">{{item.name}}</text>
+          </view>
+          <view class="item-body">
+            <text wx:if="{{item.body}}">{{item.body}}</text>
+            <text wx:else>暂无详情</text>
+          </view>
+          </view> 
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
 </view>

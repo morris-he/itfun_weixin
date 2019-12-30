@@ -35,7 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 5,
 			"list": [
 				{
 					"id": 0,
@@ -85,6 +85,14 @@
 					"id": -1,
 					"name": "我的页面",
 					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/categories/categories",
+					"query": "",
 					"scene": null
 				}
 			]

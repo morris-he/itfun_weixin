@@ -3,7 +3,7 @@
   <image src="/assets/images/back.png"></image>
   <view class="button">
     <view class="{{index === currentIndex ? 'active' : ''}}" wx:for="{{buttonData}}" wx:key="index" data-index="{{index}}" bindtap="change">
-      <text>{{item}}</text>
+    {{item}}
     </view>
   </view>
   <text bindtap="toIndex">首页</text>

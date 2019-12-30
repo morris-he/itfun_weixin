@@ -5,6 +5,8 @@
 
 .main{
   background: #fff;
+    height:100vh;
+  overflow:hidden;
 }
 .header{
   width: 100%;
@@ -16,6 +18,9 @@
   padding: 20rpx;
   text-align: center;
   font-size: 35rpx;
+}
+.bg{
+  background:rgba(0, 0, 0,0.2);
 }
 .video{
   padding-top: 76rpx;

@@ -20,11 +20,14 @@ Page({
     error_password: ""
   },
   onLoad: function() {},
+
   change(e) {
+    console.log(e)
     this.setData({
       currentIndex: e.currentTarget.dataset.index
     })
   },
+  
   login(e) {
     const data = {
       grant_type: 'password',
@@ -39,14 +42,13 @@ Page({
       data: data,
       success: res => {
         console.log(res)
-        wx.setStorageSync('token_type', res.data.token_type, )
-        wx.setStorageSync('access_token', res.data.access_token)
         if (res.statusCode === 200) {
+          wx.setStorageSync('token_type', res.data.token_type)
+          wx.setStorageSync('access_token', res.data.access_token)
           wx.switchTab({
             url: '/pages/mine/mine'
           })
         } else {
-
           wx.showModal({
             title: '登录信息有误',
             content: '请重新登录',

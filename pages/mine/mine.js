@@ -11,12 +11,13 @@ Page({
   onLoad: function () {
     this.getUser()
   },
+  //监听页面
   onShow: function () {
     this.getUser()
   },
   toLogin(){
     wx.navigateTo({
-      url: '/pages/login/login'
+      url:'/pages/login/login'
     })
   },
 // 判断用户是否登录，未登录则不执行加载
@@ -39,7 +40,6 @@ Page({
             wx.navigateTo({
               url: '/pages/login/login'
             })
-            return
           }
           this.setData({
             user: res.data.user,

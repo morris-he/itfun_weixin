@@ -33,6 +33,7 @@ Page({
         this.setData({
           courses: res.data.courses
         })
+        this.setHeight()
       }
     })
   },
@@ -45,19 +46,20 @@ Page({
     this.initCourses()
   },
   // （暂时关掉原因）如果开启滑块效果，则需要动态获取高度。
-  // changePage(e){
-  //   // console.log(e.detail)
-  //   this.setData({
-  //     currentIndex: e.detail.current
-  //   })
-  //   this.initCourses()
-  // },
-  // setHeight(){
-  //   let bodyHeight = this.data.courses.length*526+'rpx'
-  //   this.setData({
-  //     bodyHeight: bodyHeight
-  //   })
-  // },
+  changePage(e){
+    // console.log(e.detail)
+    this.setData({
+      currentIndex: e.detail.current
+    })
+    this.initCourses()
+  },
+  setHeight(){
+    let bodyHeight = this.data.courses.length*526+'rpx'
+    console.log(bodyHeight)
+    this.setData({
+      bodyHeight: bodyHeight
+    })
+  },
   toCourse(e){
     let id = e.currentTarget.dataset.id
     wx.navigateTo({

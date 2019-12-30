@@ -1,23 +1,27 @@
-<import src="/towxml/entry.wxml"/>
+<import src="/towxml/entry.wxml" />
 <!-- 左侧导航 -->
 
-  <view class="side">
-    <view class="title">
-      <text>{{course.name}}</text>
-      <image src="/assets/images/back.png" bindtap="showSide"></image>
-    </view>
-    <view class="chapters">
-      <view wx:for="{{chapters}}" wx:key="index" class="chapter-item"
-      data-id="{{item.id}}"
-      bindtap="toCourse">
+<view class="side">
+  <view class="title">
+    <text>{{course.name}}</text>
+    <image src="/assets/images/back.png" bindtap="showSide"></image>
+  </view>
+
+  <view class="chapters">
+
+    <view wx:for="{{chapters}}" wx:key="index" data-id="{{item.id}}" bindtap="toCourse">
+      <view class="chapter-item {{item.id==chapter_id?'bg':''}}">
         <image src="/assets/images/play.png"></image>
         <text class='side_list'>{{item.title}}</text>
         <text class="time">{{item.time}}</text>
       </view>
     </view>
+
+
   </view>
-  <view class="{{showSide === true ? 'cover' : ''}}" bindtap="showSide">
-  </view>
+</view>
+<view class="{{showSide === true ? 'cover' : ''}}" bindtap="showSide">
+</view>
 
 <!-- 主体内容 -->
 <view class="main {{showSide === true ? 'show-side' : 'hidden-side'}}">
@@ -25,8 +29,7 @@
     <text>{{chapter.title}}</text>
   </view>
   <view class="video">
-    <video src="{{chapter.video}}"
-    poster="{{chapter.photo}}"></video>
+    <video src="{{chapter.video}}" poster="{{chapter.photo}}"></video>
   </view>
   <view class="content">
     <view class="course-list" bindtap="showSide">
@@ -35,7 +38,7 @@
     </view>
     <scroll-view scroll-y style="height: 800rpx;">
       <view class="body">
-        <template is="entry" data="{{...body}}"/>
+        <template is="entry" data="{{...body}}" />
       </view>
     </scroll-view>
   </view>

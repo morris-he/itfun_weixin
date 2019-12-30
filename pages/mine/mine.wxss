@@ -110,6 +110,7 @@
 .main{
   box-sizing: border-box;
   padding:20rpx;
+
 }
 .main image{
   width: 100%;
